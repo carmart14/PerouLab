@@ -19,7 +19,11 @@ library(Seurat)
 library(patchwork)
 
 # Load the PBMC dataset
+<<<<<<< HEAD
 pbmc.data <- Read10X(data.dir = "/nas/longleaf/home/carmart/PerouLab/filtered_gene_bc_matrices/hg19/")
+=======
+pbmc.data <- Read10X(data.dir = "/Users/ivory/Downloads/GitHub/PerouLab/filtered_gene_bc_matrices/hg19/")
+>>>>>>> refs/remotes/origin/main
 # Initialize the Seurat object with the raw (non-normalized data).
 pbmc <- CreateSeuratObject(counts = pbmc.data, project = "pbmc3k", min.cells = 3, min.features = 200)
 pbmc
@@ -41,6 +45,7 @@ plot1 <- FeatureScatter(pbmc, feature1 = "nCount_RNA", feature2 = "percent.mt")
 plot2 <- FeatureScatter(pbmc, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
 plot1 + plot2
 
+<<<<<<< HEAD
 # filtering out based on feature set and counts
 pbmc <- subset(pbmc, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5)
 
@@ -133,3 +138,8 @@ pbmc.markers %>%
 
 DoHeatmap(pbmc, features = top10$gene) + NoLegend()
 
+=======
+
+
+# stopping here to better understand the data
+>>>>>>> refs/remotes/origin/main
