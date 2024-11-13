@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+*pbmc_tutorial.rds
+*filtered_gene_bc_matrices/
